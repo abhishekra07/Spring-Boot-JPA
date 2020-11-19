@@ -49,4 +49,7 @@ public interface IUserRepository extends JpaRepository<User,Integer>{
 	//sql query => select * from user where age = ?1 order by first_name desc;
 	List<User> findByAgeOrderByFirstNameDesc(int age);
 	
+	//sql query => select * from user where first_name <> ?1;
+	List<User> findByFastNameNot(String firstName);
+	
 }
