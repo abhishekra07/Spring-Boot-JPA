@@ -1,5 +1,7 @@
 package com.codelabs.entity;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,7 +27,7 @@ public class User {
 	private int age;
 	
 	@Column(name = "dob")
-	private String dob;
+	private Date dob;
 	
 	@Column(name = "active")
 	private boolean active;
@@ -62,11 +64,11 @@ public class User {
 		this.age = age;
 	}
 
-	public String getDob() {
+	public Date getDob() {
 		return dob;
 	}
 
-	public void setDob(String dob) {
+	public void setDob(Date dob) {
 		this.dob = dob;
 	}
 
