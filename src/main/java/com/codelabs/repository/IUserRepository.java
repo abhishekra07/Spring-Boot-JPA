@@ -58,4 +58,10 @@ public interface IUserRepository extends JpaRepository<User,Integer>{
 	//sql query => select * from user where age not in ?1;
 	List<User> findByAgeNotIn(List<Integer> age);
 	
+	//sql query => select * from user where active = true;
+	List<User> findByActiveTrue();
+	
+	//sql query => select * from user where active = false;
+	List<User> findByActiveFalse();
+	
 }
