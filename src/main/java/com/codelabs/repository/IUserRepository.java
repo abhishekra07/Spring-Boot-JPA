@@ -64,4 +64,7 @@ public interface IUserRepository extends JpaRepository<User,Integer>{
 	//sql query => select * from user where active = false;
 	List<User> findByActiveFalse();
 	
+	//sql query => select count(*) from user where last_name = ?1;
+	long countByLastName(String lastName);
+	
 }
