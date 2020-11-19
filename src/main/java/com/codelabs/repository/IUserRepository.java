@@ -67,4 +67,10 @@ public interface IUserRepository extends JpaRepository<User,Integer>{
 	//sql query => select count(*) from user where last_name = ?1;
 	long countByLastName(String lastName);
 	
+	//sql query => select top 1 * from user order by last_name asc;
+	User findFirstByOrderByLastNameAsc();
+
+	//sql query => select top 3 * from user order by age desc;
+	User findTop3ByOrderByAgeDesc();
+	
 }
